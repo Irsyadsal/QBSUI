@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-    );
+  );
 
     final lorem = Padding(
       padding: EdgeInsets.all(8.0),
