@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:better_player/better_player.dart';
 
 class Better extends StatefulWidget {
-  static String tag = 'video-page';
+  static String tag = 'video-player';
 
   @override
   _BetterState createState() => _BetterState();

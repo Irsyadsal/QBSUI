@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutterqbsui_app/better_player.dart';
 
 void main(){
   runApp(new MaterialApp(
@@ -40,7 +41,7 @@ class Optionpage extends StatelessWidget {
     );
   }
 
-  Card buildCard(String titleText, String subtitleText, Color colorCard, Color colorTextButton) {
+  Card buildCard(String titleText, String subtitleText, Color colorCard, Color colorTextButton){
     return Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)
@@ -71,7 +72,7 @@ class Optionpage extends StatelessWidget {
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                             onPressed: (){
                               BuildContext context;
-                              Navigator.pushNamed(context, '/Halsatu');
+                              Navigator.of(context).pushNamed(Better.tag);
                             },
                             ),
                         )

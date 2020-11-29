@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutterqbsui_app/option_page.dart';
 import 'login_app.dart';
 import 'home_page.dart';
 import 'signup.dart';
+import 'better_player.dart';
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
     LoginPage.tag: (context) => LoginPage(),
     HomePage.tag: (context) => HomePage(),
     SignUp.tag: (context) => SignUp (),
-    Optionpage.tag: (context) => Optionpage()
+    Optionpage.tag: (context) => Optionpage(),
+    Better.tag: (context) => Better(),
   };
 
   @override
