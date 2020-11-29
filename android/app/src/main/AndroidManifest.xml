@@ -8,7 +8,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="Quadrant Qiro'ah"
-        android:icon="@mipmap/reading-quran.png">
+        android:icon="@mipmap/reading_quran.png">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
