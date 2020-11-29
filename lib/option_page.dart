@@ -1,16 +1,6 @@
-
+import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterqbsui_app/better_player.dart';
-
-void main(){
-  runApp(new MaterialApp(
-    home: Optionpage(),
-    title: "Option Page",
-    routes: <String, WidgetBuilder>{
-      '/Optionpage' : (BuildContext context) => new Optionpage(),
-  },
-  ));
-}
 
 class Optionpage extends StatelessWidget {
 
