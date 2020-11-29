@@ -47,23 +47,25 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     final loginButton = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
-      child: Material(
-        borderRadius: BorderRadius.circular(80.0),
-        shadowColor: Colors.lightBlueAccent.shade100,
-        elevation: 5.0,
-        child: MaterialButton(
-          minWidth: 200.0,
-          height: 42.0,
-          onPressed: () {
-            Navigator.of(context).pushNamed(HomePage.tag);
-          },
-          color: Colors.lightBlueAccent,
-          child: Text(
-            'Log In',
-            style: TextStyle(color: Colors.white),
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
+      child: Row(
+        children: <Widget>[
+          FlatButton(
+            minWidth: 310.0,
+            height: 42,
+            shape:  RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(80.0),
+            ),
+            color: Colors.blue,
+            onPressed: () {
+              Navigator.of(context).pushNamed(HomePage.tag);
+            },
+            child: Text(
+              "Login",
+              style: TextStyle(color: Colors.white),
+            ),
           ),
-        ),
+        ],
       ),
     );
 
