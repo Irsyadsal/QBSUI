@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterqbsui_app/option_page.dart';
+import 'package:flutterqbsui_app/better_player.dart';
 
 class HomePage extends StatelessWidget {
   static String tag = 'home-page';
@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
         color: Colors.blueAccent,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
         onPressed: (){
-          Navigator.of(context).pushNamed(Optionpage.tag);
+          Navigator.of(context).pushNamed(Better.tag);
         }
     );
 
