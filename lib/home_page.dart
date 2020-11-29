@@ -31,7 +31,7 @@ class HomePage extends StatelessWidget {
     final lorem = Padding(
       padding: EdgeInsets.all(8.0),
       child: Text(
-        'Quadrant Qiroah adalah sebuah aplikasi yang membantu ummah dalam kesulitan menghafal atau membaca al quran. denagn mushrif terbaik ummah dapat mempelajari al quran dengan tartil',
+        'Quadrant Qiroah adalah aplikasi yang menyediakan video - video materi yang lengkap dan mudah dipahami oleh pengguna awam, sehingga belajar tahsin Al-Quran menjadi lebih mudah.',
         style: TextStyle(fontSize: 16.0, color: Colors.white),
       ),
     );
