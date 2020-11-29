@@ -1,19 +1,20 @@
 
 import 'package:flutter/material.dart';
-import 'package:quadrant_qiroah/navigation_routes.dart';
 
 void main(){
   runApp(new MaterialApp(
-    home: MainPage(),
+    home: Optionpage(),
     title: "Option Page",
     routes: <String, WidgetBuilder>{
-      '/Optionpage' : (BuildContext context) => new MainPage(),
-      '/Halsatu' : (BuildContext context) => new Halsatu()
+      '/Optionpage' : (BuildContext context) => new Optionpage(),
   },
   ));
 }
 
 class Optionpage extends StatelessWidget {
+
+  static String tag = 'option-page';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
