@@ -1,4 +1,3 @@
-import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterqbsui_app/better_player.dart';
 
@@ -16,13 +15,26 @@ class Optionpage extends StatelessWidget {
         ),
         body: Container(
           child: Container(
-            
             child: ListView(
               children: <Widget>[
+                new ListTile(
+                  leading: Icon(Icons.person),
+                  title: Text("Ahlan, Mardika!"),
+                  subtitle: Text("Siap belajar membaca Alquran?"),
+                  trailing: Icon(Icons.more_vert),
+                ),
                 buildCard("Tajwid", "Tajwid adalah ilmu yang mengajarkan panjang pendek bacaan al-qur'an", Colors.blue, Colors.blue),
                 buildCard("Makhrorijul Huruf", "Makhorijul Huruf berisi pengetahuan tentang tempat keluarnya huruf hijaiyah.", Colors.red, Colors.red),
                 buildCard("Tanda Baca", "Tanda baca dalam al-qur'an merupakan salah satu fondasi bacaan", Colors.yellow, Colors.yellow),
-                buildCard("Lahn", "Lahn merupakan kumpulan kesalahan umum yang kerap terjadi saat membaca al - qur'an.", Colors.green, Colors.green)
+                buildCard("Lahn", "Lahn merupakan kumpulan kesalahan umum yang kerap terjadi saat membaca al - qur'an.", Colors.green, Colors.green),
+                new MaterialButton(
+                  child: Text("Pelajari", style: TextStyle(color: Colors.black),),
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                  onPressed: (){
+                    Navigator.of(context).pushNamed(Better.tag);
+                  },
+                )
               ],
             ),
           ),
