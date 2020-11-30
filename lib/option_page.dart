@@ -1,16 +1,6 @@
+import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterqbsui_app/better_player.dart';
-import 'package:flutterqbsui_app/login_app.dart';
-
-void main(){
-  runApp(new MaterialApp(
-    home: Optionpage(),
-    title: "Option Page",
-    routes: <String, WidgetBuilder>{
-      '/Optionpage' : (BuildContext context) => new Optionpage(),
-  },
-  ));
-}
 
 class Optionpage extends StatelessWidget {
 
@@ -20,40 +10,28 @@ class Optionpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          leading: Icon(Icons.home),
+          title: Text("Home Page"),
+        ),
         body: Container(
+          child: Container(
+            
             child: ListView(
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(40.0),
-                  child: new ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Ahlan, Mardika!"),
-                    subtitle: Text("Siap belajar membaca Alquran?"),
-                    trailing: Icon(Icons.more_vert),
-                  ),
-                ),
-                buildCard("Tajwid", "Tajwid adalah ilmu yang mengajarkan panjang pendek bacaan al-qur'an", Colors.blue, Colors.blue, LoginPage.tag),
-                buildCard("Makhrorijul Huruf", "Makhorijul Huruf berisi pengetahuan tentang tempat keluarnya huruf hijaiyah.", Colors.red, Colors.red, Better.tag),
-                buildCard("Tanda Baca", "Tanda baca dalam al-qur'an merupakan salah satu fondasi bacaan", Colors.yellow, Colors.yellow, Better.tag),
-                buildCard("Lahn", "Lahn merupakan kumpulan kesalahan umum yang kerap terjadi saat membaca al - qur'an.", Colors.green, Colors.green, Better.tag),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: new RaisedButton(
-                    child: Text("Pelajari", style: TextStyle(color: Colors.blue),),
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-                    onPressed: (){
-                      Navigator.of(context).pushNamed(Better.tag);
-                    }),
-              )
+                buildCard("Tajwid", "Tajwid adalah ilmu yang mengajarkan panjang pendek bacaan al-qur'an", Colors.blue, Colors.blue),
+                buildCard("Makhrorijul Huruf", "Makhorijul Huruf berisi pengetahuan tentang tempat keluarnya huruf hijaiyah.", Colors.red, Colors.red),
+                buildCard("Tanda Baca", "Tanda baca dalam al-qur'an merupakan salah satu fondasi bacaan", Colors.yellow, Colors.yellow),
+                buildCard("Lahn", "Lahn merupakan kumpulan kesalahan umum yang kerap terjadi saat membaca al - qur'an.", Colors.green, Colors.green)
               ],
             ),
+          ),
         ),
       ),
     );
   }
 
-  Card buildCard(String titleText, String subtitleText, Color colorCard, Color colorTextButton, String routeName){
+  Card buildCard(String titleText, String subtitleText, Color colorCard, Color colorTextButton){
     return Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)
@@ -84,7 +62,7 @@ class Optionpage extends StatelessWidget {
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                             onPressed: (){
                               BuildContext context;
-                              Navigator.of(context).pushNamed(routeName);
+                              Navigator.of(context).pushNamed(Better.tag);
                             },
                             ),
                         )
