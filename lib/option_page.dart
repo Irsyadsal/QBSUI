@@ -17,11 +17,14 @@ class Optionpage extends StatelessWidget {
           child: Container(
             child: ListView(
               children: <Widget>[
-                new ListTile(
-                  leading: Icon(Icons.person),
-                  title: Text("Ahlan, Mardika!"),
-                  subtitle: Text("Siap belajar membaca Alquran?"),
-                  trailing: Icon(Icons.more_vert),
+                Padding(
+                  padding: const EdgeInsets.all(40.0),
+                  child: new ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Ahlan, Mardika!"),
+                    subtitle: Text("Siap belajar membaca Alquran?"),
+                    trailing: Icon(Icons.more_vert),
+                  ),
                 ),
                 buildCard("Tajwid", "Tajwid adalah ilmu yang mengajarkan panjang pendek bacaan al-qur'an", Colors.blue, Colors.blue),
                 buildCard("Makhrorijul Huruf", "Makhorijul Huruf berisi pengetahuan tentang tempat keluarnya huruf hijaiyah.", Colors.red, Colors.red),
