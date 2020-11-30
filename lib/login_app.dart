@@ -18,9 +18,12 @@ class _LoginPageState extends State<LoginPage> {
     final logo = Hero(
       tag: 'hero',
       child: CircleAvatar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.transparent,
         radius: 70.0,
-        child: Image.asset('images/reading-quran.png'),
+        child: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Image.asset('images/reading-quran.png'),
+        ),
       ),
     );
 
@@ -29,9 +32,10 @@ class _LoginPageState extends State<LoginPage> {
       autofocus: false,
       initialValue: '',
       decoration: InputDecoration(
-        hintText: 'Email',
+        hintText: 'Username',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+        focusColor: Colors.lightBlueAccent
       ),
     );
 
@@ -56,13 +60,13 @@ class _LoginPageState extends State<LoginPage> {
             shape:  RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(80.0),
             ),
-            color: Colors.blue,
+            color: Colors.white,
             onPressed: () {
               Navigator.of(context).pushNamed(HomePage.tag);
             },
             child: Text(
               "Login",
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black),
             ),
           ),
         ],
@@ -89,8 +93,17 @@ class _LoginPageState extends State<LoginPage> {
   
 
     return Scaffold(
-      backgroundColor: Colors.lightBlue,
-      body: Center  (
+      body: Container  (
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: <Color>[
+              Colors.greenAccent,
+              Colors.lightBlueAccent
+            ]
+          )
+        ),
         child: ListView(
           shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
