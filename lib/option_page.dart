@@ -9,10 +9,6 @@ class Optionpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          leading: Icon(Icons.home),
-          title: Text("Home Page"),
-        ),
         body: Container(
           child: Container(
             child: ListView(
