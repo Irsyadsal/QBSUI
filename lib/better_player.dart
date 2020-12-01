@@ -18,8 +18,7 @@ class _BetterState extends State<Better> {
         backgroundColor: Colors.red,
         title: Text("Video"),
       ),
-      body: AspectRatio(
-        aspectRatio: 16 / 9,
+      body: Container(
         child: BetterPlayer.network(
           "https://raw.githubusercontent.com/Fath-abd/fath/main/alif.mp4",
           betterPlayerConfiguration: BetterPlayerConfiguration
