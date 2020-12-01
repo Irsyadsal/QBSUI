@@ -16,7 +16,7 @@ class _BetterState extends State<Better> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.red,
-        title: Text("Example player"),
+        title: Text("Video"),
       ),
       body: AspectRatio(
         aspectRatio: 16 / 9,

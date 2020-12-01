@@ -16,7 +16,7 @@ class _SignUpState extends State<SignUp> {
     final logo = Hero(
       tag: 'hero',
       child: CircleAvatar(
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Colors.transparent,
         radius: 70.0,
         child: Image.asset('images/reading-quran.png'),
       ),
@@ -56,25 +56,28 @@ class _SignUpState extends State<SignUp> {
     );
 
     final loginButton = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
-      child: Material(
-        borderRadius: BorderRadius.circular(80.0),
-        shadowColor: Colors.lightBlueAccent.shade100,
-        elevation: 5.0,
-        child: MaterialButton(
-          minWidth: 200.0,
-          height: 42.0,
-          onPressed: () {
-            Navigator.of(context).pushNamed(LoginPage.tag);
-          },
-          color: Colors.white,
-          child: Text(
-            'Sign Up',
-            style: TextStyle(color: Colors.black54),
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
+      child: Row(
+        children: <Widget>[
+          FlatButton(
+            minWidth: 310.0,
+            height: 42,
+            shape:  RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(80.0),
+            ),
+            color: Colors.white,
+            onPressed: () {
+              Navigator.of(context).pushNamed(LoginPage.tag);
+            },
+            child: Text(
+              "Login",
+              style: TextStyle(color: Colors.black),
+            ),
           ),
-        ),
+        ],
       ),
     );
+
 
 
     final forgotLabel = FlatButton(
@@ -87,7 +90,7 @@ class _SignUpState extends State<SignUp> {
 
 
     return Scaffold(
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: Colors.blue,
       body: Center  (
         child: ListView(
           shrinkWrap: true,
