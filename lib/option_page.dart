@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterqbsui_app/better_player.dart';
+import 'package:flutterqbsui_app/video_selection.dart';
 
 class Optionpage extends StatelessWidget {
 
@@ -22,7 +22,7 @@ class Optionpage extends StatelessWidget {
                     trailing: Icon(Icons.more_vert),
                   ),
                 ),
-                buildCard("Tajwid", "Tajwid adalah ilmu yang mengajarkan panjang pendek bacaan al-qur'an", Colors.blue, Colors.blue),
+                buildCard("Huruf Hijaiyah", "Alquran adalah kitab yang tertulis dari huruf huruf arab yang disebut juga huruf hijaiyah. Maka, mempelajari huruf hijaiyah merupakan fondasi utama membaca Alquran.", Colors.blue, Colors.blue),
                 buildCard("Makhrorijul Huruf", "Makhorijul Huruf berisi pengetahuan tentang tempat keluarnya huruf hijaiyah.", Colors.red, Colors.red),
                 buildCard("Tanda Baca", "Tanda baca dalam al-qur'an merupakan salah satu fondasi bacaan", Colors.yellow, Colors.yellow),
                 buildCard("Lahn", "Lahn merupakan kumpulan kesalahan umum yang kerap terjadi saat membaca al - qur'an.", Colors.green, Colors.green),
@@ -31,7 +31,7 @@ class Optionpage extends StatelessWidget {
                   color: Colors.white,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                   onPressed: (){
-                    Navigator.of(context).pushNamed(Better.tag);
+                    Navigator.of(context).pushNamed(Videoselection.tag);
                   },
                 )
               ],
@@ -73,7 +73,7 @@ class Optionpage extends StatelessWidget {
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                             onPressed: (){
                               BuildContext context;
-                              Navigator.of(context).pushNamed(Better.tag);
+                              Navigator.of(context).pushNamed(Videoselection.tag);
                             },
                             ),
                         )

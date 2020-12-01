@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterqbsui_app/signup.dart';
-
 import 'home_page.dart';
-
 
 class LoginPage extends StatefulWidget {
   static String tag = 'login-page';

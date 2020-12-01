@@ -4,6 +4,7 @@ import 'login_app.dart';
 import 'home_page.dart';
 import 'signup.dart';
 import 'better_player.dart';
+import 'video_selection.dart';
 
 void main() => runApp(new MyApp());
 
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     SignUp.tag: (context) => SignUp (),
     Optionpage.tag: (context) => Optionpage(),
     Better.tag: (context) => Better(),
+    Videoselection.tag : (context) => Videoselection()
   };
 
   @override
