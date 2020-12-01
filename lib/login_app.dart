@@ -15,6 +15,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
 
+    final teks = Text(
+      "Sign in to Your account",
+      style: TextStyle(color: Colors.grey),
+    );
+
     final logo = Hero(
       tag: 'hero',
       child: CircleAvatar(
@@ -108,6 +113,8 @@ class _LoginPageState extends State<LoginPage> {
           shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
+            teks,
+            SizedBox(height: 5.0),
             logo,
             SizedBox(height: 48.0),
             email,
