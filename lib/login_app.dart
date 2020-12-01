@@ -93,17 +93,8 @@ class _LoginPageState extends State<LoginPage> {
   
 
     return Scaffold(
-      body: Container  (
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: <Color>[
-              Colors.greenAccent,
-              Colors.lightBlueAccent
-            ]
-          )
-        ),
+      backgroundColor: Colors.blue,
+      body: Center(
         child: ListView(
           shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
