@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterqbsui_app/signup.dart';
 
@@ -14,11 +15,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-
-    final teks = Text(
-      "Sign in to Your account",
-      style: TextStyle(color: Colors.grey),
-    );
 
     final logo = Hero(
       tag: 'hero',
@@ -99,13 +95,20 @@ class _LoginPageState extends State<LoginPage> {
 
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Center(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: <Color>[
+              Colors.lightGreenAccent,
+              Colors.lightBlueAccent
+            ]
+          )
+        ),
         child: ListView(
-          shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
-            teks,
-            SizedBox(height: 5.0),
             logo,
             SizedBox(height: 48.0),
             email,

@@ -70,7 +70,7 @@ class _SignUpState extends State<SignUp> {
               Navigator.of(context).pushNamed(LoginPage.tag);
             },
             child: Text(
-              "Login",
+              "Sign Up",
               style: TextStyle(color: Colors.black),
             ),
           ),
@@ -91,9 +91,18 @@ class _SignUpState extends State<SignUp> {
 
     return Scaffold(
       backgroundColor: Colors.blue,
-      body: Center  (
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: <Color>[
+                Colors.redAccent,
+                Colors.purpleAccent
+              ]
+          )
+        ),
         child: ListView(
-          shrinkWrap: true,
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
             logo,
