@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'QBS UI',
+      title: 'Quadrant Qiro\'ah',
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(primarySwatch: Colors.green, fontFamily: 'Nunito'),
       home: new LoginPage(),

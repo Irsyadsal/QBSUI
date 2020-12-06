@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterqbsui_app/better_player.dart';
 import 'package:flutterqbsui_app/video_selection.dart';
 
 class Optionpage extends StatelessWidget {
@@ -22,10 +23,10 @@ class Optionpage extends StatelessWidget {
                     trailing: Icon(Icons.more_vert),
                   ),
                 ),
-                buildCard("Huruf Hijaiyah", "Alquran adalah kitab yang tertulis dari huruf huruf arab yang disebut juga huruf hijaiyah. Maka, mempelajari huruf hijaiyah merupakan fondasi utama membaca Alquran.", Colors.blue, Colors.blue),
-                buildCard("Makhrorijul Huruf", "Makhorijul Huruf berisi pengetahuan tentang tempat keluarnya huruf hijaiyah.", Colors.red, Colors.red),
-                buildCard("Tanda Baca", "Tanda baca dalam al-qur'an merupakan salah satu fondasi bacaan", Colors.yellow, Colors.yellow),
-                buildCard("Lahn", "Lahn merupakan kumpulan kesalahan umum yang kerap terjadi saat membaca al - qur'an.", Colors.green, Colors.green),
+                buildCard("Huruf Hijaiyah", "Alquran adalah kitab yang tertulis dari huruf huruf arab yang disebut juga huruf hijaiyah. Maka, mempelajari huruf hijaiyah merupakan fondasi utama membaca Alquran.", Colors.blue, Colors.blue, () {Navigator.of(context).pushNamed(Better.tag);}),
+                buildCard("Makhrorijul Huruf", "Makhorijul Huruf berisi pengetahuan tentang tempat keluarnya huruf hijaiyah.", Colors.red, Colors.red, () {Navigator.of(context).pushNamed(Better.tag);}),
+                buildCard("Tanda Baca", "Tanda baca dalam al-qur'an merupakan salah satu fondasi bacaan", Colors.yellow, Colors.yellow, () {Navigator.of(context).pushNamed(Better.tag);}),
+                buildCard("Lahn", "Lahn merupakan kumpulan kesalahan umum yang kerap terjadi saat membaca al - qur'an.", Colors.green, Colors.green, () {Navigator.of(context).pushNamed(Better.tag);}),
                 new MaterialButton(
                   child: Text("Pelajari", style: TextStyle(color: Colors.black),),
                   color: Colors.white,
@@ -42,7 +43,7 @@ class Optionpage extends StatelessWidget {
     );
   }
 
-  Card buildCard(String titleText, String subtitleText, Color colorCard, Color colorTextButton){
+  Card buildCard(String titleText, String subtitleText, Color colorCard, Color colorTextButton, Function press){
     return Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)
@@ -71,10 +72,7 @@ class Optionpage extends StatelessWidget {
                             child: Text("Pelajari", style: TextStyle(color: colorTextButton),),
                             color: Colors.white,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-                            onPressed: (){
-                              BuildContext context;
-                              Navigator.of(context).pushNamed(Videoselection.tag);
-                            },
+                            onPressed: press,
                             ),
                         )
                         ],
