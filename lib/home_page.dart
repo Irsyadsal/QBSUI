@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-  );
+    );
 
     final lorem = Padding(
       padding: EdgeInsets.all(8.0),
@@ -38,14 +38,16 @@ class HomePage extends StatelessWidget {
     );
 
     final next = MaterialButton(
-        child: Text('selanjutnya', style: TextStyle(color: Colors.white),),
+        child: Text(
+          'selanjutnya',
+          style: TextStyle(color: Colors.white),
+        ),
         color: Colors.blueAccent,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-        onPressed: (){
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+        onPressed: () {
           Navigator.of(context).pushNamed(Optionpage.tag);
-        }
-    );
-
+        });
 
     final body = Container(
       width: MediaQuery.of(context).size.width,

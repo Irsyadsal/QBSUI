@@ -13,7 +13,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-
     final logo = Hero(
       tag: 'hero',
       child: CircleAvatar(
@@ -31,11 +30,10 @@ class _LoginPageState extends State<LoginPage> {
       autofocus: false,
       initialValue: '',
       decoration: InputDecoration(
-        hintText: 'Username',
-        contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
-        focusColor: Colors.lightBlueAccent
-      ),
+          hintText: 'Username',
+          contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0)),
+          focusColor: Colors.lightBlueAccent),
     );
 
     final password = TextFormField(
@@ -56,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
           FlatButton(
             minWidth: 310.0,
             height: 42,
-            shape:  RoundedRectangleBorder(
+            shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(80.0),
             ),
             color: Colors.white,
@@ -73,13 +71,13 @@ class _LoginPageState extends State<LoginPage> {
     );
 
     final signupLabel = FlatButton(
-      child: Text (
+      child: Text(
         'Sign Up',
-          style: TextStyle(color: Colors.black54),
+        style: TextStyle(color: Colors.black54),
       ),
-          onPressed: () {
-            Navigator. of (context). pushNamed(SignUp.tag);
-          },
+      onPressed: () {
+        Navigator.of(context).pushNamed(SignUp.tag);
+      },
     );
 
     final forgotLabel = FlatButton(
@@ -89,21 +87,18 @@ class _LoginPageState extends State<LoginPage> {
       ),
       onPressed: () {},
     );
-  
 
     return Scaffold(
       backgroundColor: Colors.blue,
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: <Color>[
+            gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: <Color>[
               Colors.lightGreenAccent,
               Colors.lightBlueAccent
-            ]
-          )
-        ),
+            ])),
         child: ListView(
           padding: EdgeInsets.only(left: 24.0, right: 24.0),
           children: <Widget>[
