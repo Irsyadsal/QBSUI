@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   final routes = <String, WidgetBuilder>{
     LoginPage.tag: (context) => LoginPage(),
     HomePage.tag: (context) => HomePage(),
-    SignUp.tag: (context) => SignUp (),
+    SignUp.tag: (context) => LoginPage (),
     Optionpage.tag: (context) => Optionpage(),
     Better.tag: (context) => Better(),
     Videoselection.tag : (context) => Videoselection()
